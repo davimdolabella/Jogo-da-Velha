@@ -65,7 +65,7 @@ div.pontos{
     max-width: 500px;
     max-height: 500px;
     width: 490px;
-    height: 490px;
+    height: 485px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -88,16 +88,131 @@ div.pontos{
     background-size: cover;
     
 }
-
+.tela_de_fim{
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 200px);
+    border: 5px solid #eeecec;
+    border-radius: 20px;
+    width: 400px;
+    height: 300px;
+    background-color: #5e8b9a;
+    z-index: 999;
+    font-size: 30px;
+    color: #eeecec;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tela_de_fim #peca_vitoria{
+    width: 60px;
+    height: 60px;
+   margin-bottom: 15px;
+   background-size: cover;
+    background-image: url('../img/x.png');
+}
+.tela_de_fim button{
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+    color: #43626d;
+    background-color: #eeecec;
+    cursor: pointer;
+}
+.tela_de_fim button:hover{
+    background-color: #e2e1e1;
+    color: #5e8c9b;
+}
+#tela_fim_fundo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #527a878a;
+}
+#velha{
+    display: none;
+}
+#vitoria{
+    display: none;
+}
+#tela_fim_fundo{
+    display: none;
+}
+.pecas_velha{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.pecas_velha div{
+    margin-bottom: 20px;
+    margin-left: 5px;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+}
+.peca1{
+    background-image: url('../img/x.png');
+}
+.peca2{
+    background-image: url('../img/o.png');
+}
 @media  screen and (max-width: 580px) {
     #jogo_container{
         height: 60%;
         width: 90%;
     }
+    .tela_de_fim{
+        top: calc(50% - 100px);
+        left: calc(50% - 150px);
+        width: 300px;
+        height: 200px;
+        font-size: 20px;
+    }
+    .tela_de_fim #peca_vitoria{
+        width: 50px;
+        height: 50px;
+    }
+    .tela_de_fim button{
+        width: 70px;
+        font-size: 13px;
+    }
 }
-@media  screen and (max-width: 300px) {
+@media  screen and (max-width: 320px) {
     .single .peca{
         width: 30px;
         height: 30px;
+    }
+    .tela_de_fim{
+        top: calc(50% - 50px);
+        left: calc(50% - 65px);
+        width: 130px;
+        height: 100px;
+        font-size: 15px;
+        padding: 10px;
+    }
+    .tela_de_fim #peca_vitoria{
+        width: 20px;
+        height: 20px;
+        margin-bottom: 2px;
+    }
+    .tela_de_fim button{
+        margin-top: 5px;
+        width: 70px;
+        height: 20px;
+        font-size: 10px;
+    }
+    .pecas_velha div{
+        margin-bottom: 10px;
+        margin-left: 5px;
+        width: 20px;
+        height: 20px;
+        background-size: cover;
     }
 }
