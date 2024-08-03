@@ -7,7 +7,38 @@ window.onload = () =>{
     let pontos_o = 0;
     let x_pontos_c = document.getElementById('x');
     let o_pontos_c = document.getElementById('o');
-     
+    
+
+    function tela_fim(valor){
+        let continuar = document.getElementsByClassName('continuar');
+        let tela_fundo = document.getElementById('tela_fim_fundo');
+        let tela_velha = document.getElementById('velha');
+        let tela_vitoria = document.getElementById('vitoria');
+        let peca_vitoria = document.getElementById('peca_vitoria');
+        tela_fundo.style.display = 'block';
+        if (valor == 'velha'){
+            tela_velha.style.display = 'flex';
+        }else if(valor == 'x'){
+            tela_vitoria.style.display = 'flex';
+            peca_vitoria.backgroundImage = "'url(./img/o.png)'"
+        }else if(valor == 'o'){
+            tela_vitoria.style.display = 'flex';
+            peca_vitoria.backgroundImage = "'url(./img/x.png)'"
+        }
+        for(let i = 0; i < 2; i++){
+            continuar[i].onclick = () =>{
+                tela_fundo.style.display = 'none';
+                tela_velha.style.display = 'none';
+                tela_vitoria.style.display = 'none';
+                jogador = 'x';
+                start();
+                clicar();
+            }
+        }
+            
+    }
+        
+    
     function start(){
         jogo_container.innerHTML = '';
         for(let i =0; i < 9; i++ ){
@@ -54,20 +85,9 @@ window.onload = () =>{
             };
         }
         if(acabou == true){
-            if(jogador == 'x'){
-                alert('Jogador O Ganhou!');
-                pontos_o ++;
-            }else{
-                alert('Jogador X Ganhou!');
-                pontos_x ++;
-            }
-            jogador = 'x';
-            start();
-            clicar();
+            tela_fim(jogador);
         }else if(c == 9){
-            alert('velha')
-            start();
-            clicar();
+            tela_fim('velha');
         }  
     }
     
