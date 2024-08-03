@@ -20,10 +20,12 @@ window.onload = () =>{
             tela_velha.style.display = 'flex';
         }else if(valor == 'x'){
             tela_vitoria.style.display = 'flex';
-            peca_vitoria.style.backgroundImage = "url('./img/o.png')";
+            peca_vitoria.style.backgroundImage = "url('../img/o.png')";
+            pontos_o ++;
         }else if(valor == 'o'){
             tela_vitoria.style.display = 'flex';
-            peca_vitoria.style.backgroundImage = "url('./img/x.png')";
+            peca_vitoria.style.backgroundImage = "url('../img/x.png')";
+            pontos_x ++;
         }
         for(let i = 0; i < 2; i++){
             continuar[i].onclick = () =>{
