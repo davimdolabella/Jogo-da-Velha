@@ -44,7 +44,6 @@ div.pontos{
     margin-right: 15px;
 }
 .ponto_x{
-
     width: 25px;
     height: 20px;
     background-size: contain;
@@ -72,7 +71,6 @@ div.pontos{
     grid-gap: 0;
     background-color: #527a87;
 }
-
 .single{
     border: 3px solid #eeecec;
     display: flex;
@@ -111,7 +109,6 @@ div.pontos{
     height: 60px;
    margin-bottom: 15px;
    background-size: cover;
-
 }
 .tela_de_fim button{
     margin-top: 20px;
@@ -165,8 +162,8 @@ div.pontos{
 }
 @media  screen and (max-width: 580px) {
     #jogo_container{
-        height: 400px;
-        width: 400px;
+        height: 60%;
+        width: 90%;
     }
     .tela_de_fim{
         top: calc(50% - 100px);
@@ -184,11 +181,7 @@ div.pontos{
         font-size: 13px;
     }
 }
-@media  screen and (max-width: 410px) {
-    #jogo_container{
-        height: 60%;
-        width: 90%;
-    }
+@media  screen and (max-width: 320px) {
     .single .peca{
         width: 30px;
         height: 30px;
