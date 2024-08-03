@@ -8,6 +8,7 @@ window.onload = () =>{
     let x_pontos_c = document.getElementById('x');
     let o_pontos_c = document.getElementById('o');
     
+
     function tela_fim(valor){
         let continuar = document.getElementsByClassName('continuar');
         let tela_fundo = document.getElementById('tela_fim_fundo');
@@ -19,14 +20,14 @@ window.onload = () =>{
             tela_velha.style.display = 'flex';
         }else if(valor == 'x'){
             tela_vitoria.style.display = 'flex';
-            peca_vitoria.style.backgroundImage = "url('./img/o.png')";
+            peca_vitoria.style.backgroundImage = "url('../img/o.png')";
             pontos_o ++;
         }else if(valor == 'o'){
             tela_vitoria.style.display = 'flex';
-            peca_vitoria.style.backgroundImage = "url('./img/x.png')"
+            peca_vitoria.style.backgroundImage = "url('../img/x.png')";
             pontos_x ++;
         }
-        for(let i = 0; i < 2; i++){  
+        for(let i = 0; i < 2; i++){
             continuar[i].onclick = () =>{
                 tela_fundo.style.display = 'none';
                 tela_velha.style.display = 'none';
@@ -35,6 +36,8 @@ window.onload = () =>{
                 start();
                 clicar();
             }
+        }
+            
     }
         
     
@@ -106,11 +109,14 @@ window.onload = () =>{
                         jogador = 'x'
                     }
                     atualizar();
-                    verificar();       
+                    verificar();
+                    
                 }
             }
+           
         }
     }
+   
     start();
     clicar();
 }
