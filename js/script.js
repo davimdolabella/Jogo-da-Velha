@@ -26,24 +26,7 @@ window.onload = () =>{
             peca_vitoria.style.backgroundImage = "url('./img/x.png')"
             pontos_x ++;
         }
-        for(let i = 0; i < 2; i++){
-
-    
-          
-            
-    
-
-          
-          Expand Down
-          
-            
-    
-
-          
-          Expand Up
-    
-    @@ -119,4 +119,4 @@ window.onload = () =>{
-  
+        for(let i = 0; i < 2; i++){  
             continuar[i].onclick = () =>{
                 tela_fundo.style.display = 'none';
                 tela_velha.style.display = 'none';
@@ -52,8 +35,6 @@ window.onload = () =>{
                 start();
                 clicar();
             }
-        }
-            
     }
         
     
@@ -125,11 +106,9 @@ window.onload = () =>{
                         jogador = 'x'
                     }
                     atualizar();
-                    verificar();
-                    
+                    verificar();       
                 }
             }
-           
         }
     }
     start();
