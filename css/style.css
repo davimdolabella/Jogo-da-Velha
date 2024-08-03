@@ -165,8 +165,8 @@ div.pontos{
 }
 @media  screen and (max-width: 580px) {
     #jogo_container{
-        height: 60%;
-        width: 90%;
+        height: 400px;
+        width: 400px;
     }
     .tela_de_fim{
         top: calc(50% - 100px);
@@ -184,7 +184,11 @@ div.pontos{
         font-size: 13px;
     }
 }
-@media  screen and (max-width: 320px) {
+@media  screen and (max-width: 410px) {
+    #jogo_container{
+        height: 60%;
+        width: 90%;
+    }
     .single .peca{
         width: 30px;
         height: 30px;
