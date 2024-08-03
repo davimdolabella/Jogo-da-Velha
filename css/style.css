@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    overflow: hidden;
+    background-color: #eeecec;
+}
+div.pontos{
+    display: flex;
+    width: 200px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid  #eeecec;
+    color: #eeecec;
+    background-color: #527a87;
+    border-radius: 10px;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.pontos div{
+    margin: 0 2px;
+    font-family: sans-serif;
+}
+.pontos p{
+    margin: 0 8px;
+}
+#x,#o{
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #eeecec;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#x{
+    margin-right: 15px;
+}
+.ponto_x{
+
+    width: 25px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../img/x.png) ;
+}
+.ponto_o{
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../img/o.png) ;
+}
+#jogo_container{
+    border-radius: 20px;
+    position: relative;
+    margin: 0 auto;
+    max-width: 500px;
+    max-height: 500px;
+    width: 490px;
+    height: 490px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 0;
+    background-color: #527a87;
+}
+
+.single{
+    border: 3px solid #eeecec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.single .peca{
+    display: inline-block;
+    max-width: 100px;
+    max-height: 100px;
+    width: 55px;
+    height: 55px;
+    background-size: cover;
+    
+}
+
+@media  screen and (max-width: 580px) {
+    #jogo_container{
+        height: 60%;
+        width: 90%;
+    }
+}
+@media  screen and (max-width: 300px) {
+    .single .peca{
+        width: 30px;
+        height: 30px;
+    }
+}
